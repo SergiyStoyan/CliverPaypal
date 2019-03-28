@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CliverPaypal", "CliverPaypal.csproj", "{42E74DED-329F-4E45-87B3-7AFDB59AC0C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42E74DED-329F-4E45-87B3-7AFDB59AC0C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E74DED-329F-4E45-87B3-7AFDB59AC0C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E74DED-329F-4E45-87B3-7AFDB59AC0C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E74DED-329F-4E45-87B3-7AFDB59AC0C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8600C7C-7BBF-4716-8B9C-2457526394AF}
+	EndGlobalSection
+EndGlobal
