@@ -1,9 +1,10 @@
 ﻿<h2>Pay</h2>
 
-@*<h3>@ViewData["Message"]</h3>*@
+<p>@ViewData["Message"]</p>
+
 <form action="/Home/Pay" method="post">
     <p>
-        Pay: <input type="text" name="amount" value="9" /><select name="currency"><option>USD</option> </select>
+        Pay: <input type="text" name="total" value="9" /><select name="currency"><option>USD</option> </select>
 
 
     </p>
