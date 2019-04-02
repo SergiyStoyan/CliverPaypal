@@ -48,17 +48,9 @@ namespace Cliver.Paypal
 
         public static APIContext GetAPIContext(string accessToken = null)
         {
-            // ### Api Context
-            // Pass in a `APIContext` object to authenticate 
-            // the call and to send a unique request id 
-            // (that ensures idempotency). The SDK generates
-            // a request id if you do not pass one explicitly. 
             var apiContext = new APIContext(accessToken ==null ? GetAccessToken() : accessToken);
             apiContext.Config = GetConfig();
 
-            // Use this variant if you want to pass in a request id  
-            // that is meaningful in your application, ideally 
-            // a order id.
             // String requestId = Long.toString(System.nanoTime();
             // APIContext apiContext = new APIContext(GetAccessToken(), requestId ));
 

@@ -42,7 +42,7 @@ namespace CliverPaypal.Controllers
         }
 
         [HttpPost]
-        public IActionResult Pay(string total, string currency)
+        public IActionResult Pay(string total, string currency, string itemName)
         {
             //cache.Set("", paypal);
             Amount amount = new Amount
@@ -60,7 +60,7 @@ namespace CliverPaypal.Controllers
             ItemList itemList = new ItemList() { items = new List<Item>() };
             itemList.items.Add(new Item()
             {
-                name = "Test Item Name",
+                name = itemName,
                 currency = currency,
                 price = total,
                 quantity = "1",
