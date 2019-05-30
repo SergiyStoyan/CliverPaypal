@@ -13,16 +13,16 @@ using PayPal.Api;
 
 namespace Cliver.Paypal
 {
-    public class StorageOptions
-    {
-        public String StorageConnectionString { get; set; }
-        public String AccountName { get; set; }
-        public String AccountKey { get; set; }
-        public String DefaultEndpointsProtocol { get; set; }
-        public String EndpointSuffix { get; set; }
+    //public class StorageOptions
+    //{
+    //    public String StorageConnectionString { get; set; }
+    //    public String AccountName { get; set; }
+    //    public String AccountKey { get; set; }
+    //    public String DefaultEndpointsProtocol { get; set; }
+    //    public String EndpointSuffix { get; set; }
 
-        public StorageOptions() { }
-    }
+    //    public StorageOptions() { }
+    //}
 
     public class Paypal
     {
@@ -47,7 +47,7 @@ namespace Cliver.Paypal
         public IActionResult BeginPayment(Controller controller, string invoiceNumber, Amount amount, ItemList itemList, string intent = "sale")
         {
             string paymentGuid = Convert.ToString((new Random()).Next(100000));
-            Payer payer = new Payer() { payment_method = "paypal" };
+            Payer payer = new Payer() { payment_method = "paypal", };
             string baseUrl = controller.Request.Scheme + "://" + controller.Request.Host + controller.Request.Path + "?" + QueryKeys.PaymentGuid + "=" + paymentGuid;
             RedirectUrls redirectUrls = new RedirectUrls()
             {
@@ -60,7 +60,7 @@ namespace Cliver.Paypal
                     description = "Transaction description.",
                     invoice_number = invoiceNumber,
                     amount = amount,
-                    item_list = itemList
+                    item_list = itemList, 
                 }
             };
             Payment payment = new Payment()
